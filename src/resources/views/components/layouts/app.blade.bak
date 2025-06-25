@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Berita</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('front/assets/css/style.css')}} " />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- ============================= -->
+    <!-- Navbar -->
+    <!-- ============================ -->
+    <nav
+      id="navlistWrapper"
+      class="navbar navbar-expand-lg navbar-light bg-white py-3 pt-2 pb-2"
+    >
+      <div class="container">
+        <div class="row w-100 align-items-center">
+          <!-- Logo di kiri -->
+          <div
+            class="col-6 col-lg-4 d-flex align-items-center order-1 order-lg-1"
+          >
+            <a class="m-0 navbar-brand" href="#">
+              <img
+                src="{{asset('front/assets/img/logo.png')}}"
+                alt="Portal Berita Logo"
+                class="logo-img"
+              />
+            </a>
+          </div>
+
+          <!-- Tombol di kanan -->
+          <div
+            class="col-6 col-lg-4 d-flex justify-content-end align-items-center order-2 order-lg-3"
+          >
+            <a href="auth/regist.html" class="btn btn-register me-2 shadow-lg"
+              >Daftar</a
+            >
+            <a href="auth/login.html" class="btn btn-signin shadow-lg">Masuk</a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="col-12 col-lg-4 d-flex mt-3 mt-lg-0 order-3 order-lg-2">
+            <form class="d-flex w-100 position-relative">
+              <input
+                class="form-control rounded-cover ps-5"
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <i
+                class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"
+              ></i>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================= -->
+    <!-- Menu -->
+    <!-- ============================ -->
+    <div class="bg-white shadow-sm garis">
+      <div class="container">
+        <!-- Pembungkus scroll -->
+        <div class="nav-scroll-wrapper">
+          <ul class="nav nav-pills gap-2 nl">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/teknologi.html">Teknologi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sport.html">Sport</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/politik.html">Politik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/otomotif.html">Otomotif</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/lifestyle.html">Lifestyle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/tren.html">Tren</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/health.html">Health</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/property.html">Property</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/travel.html">Travel</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ============================ -->
+    <!-- navbar end -->
+    <!-- ============================ -->
+
+    <!-- ============================ -->
+    <!-- content -->
+    <!-- ============================ -->
+    <!-- Main Content -->
+    <section class="bg-black text-white py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Left Content -->
+          <div class="col-lg-8 mb-4">
+            <!-- Headline Carousel -->
+            <div
+              id="headlineCarousel"
+              class="carousel slide mb-4"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner rounded-4 overflow-hidden">
+                <a href="pages/detail.html">
+                  <div class="carousel-item active">
+                    <div
+                      class="card bg-dark text-white border-0 zoom-img-container"
+                    >
+                      <img
+                        src="{{asset('front/assets/img/travel2.png')}}"
+                        class="card-img headline-img"
+                        alt="Headline 1"
+                      />
+                      <div
+                        class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient"
+                      >
+                        <h5 class="card-title fw-semibold mb-3">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In earum dignissimos nemo vero, quod consectetur
+                          id inventore ducimus aut laborum deserunt eaque? Sed
+                          amet ut voluptatum officia tempore aperiam id?
+                        </h5>
+                        <p class="text-white small">
+                          Oleh: <strong>Admin</strong> | 2 Mei 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="pages/detail.html">
+                  <div class="carousel-item">
+                    <div
+                      class="card bg-dark text-white border-0 zoom-img-container"
+                    >
+                      <img
+                        src="{{asset('front/assets/img/sport3.png')}}"
+                        class="card-img headline-img"
+                        alt="Headline 2"
+                      />
+                      <div
+                        class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient"
+                      >
+                        <h5 class="card-title fw-semibold mb-3">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Ex ad inventore sint ullam eum facilis neque
+                          asperiores voluptas, officiis quis recusandae sapiente
+                          repudiandae laboriosam corrupti molestias libero eos
+                          quo aut?
+                        </h5>
+                        <p class="text-white small">
+                          Oleh: <strong>Admin</strong> | 2 Mei 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="pages/detail.html">
+                  <div class="carousel-item">
+                    <div
+                      class="card bg-dark text-white border-0 zoom-img-container"
+                    >
+                      <img
+                        src="{{asset('front/assets/img/politik1.png')}}"
+                        class="card-img headline-img"
+                        alt="Headline 3"
+                      />
+                      <div
+                        class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient"
+                      >
+                        <h5 class="card-title fw-semibold mb-3">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Tenetur nobis eum tempore voluptatum voluptates,
+                          ipsam amet delectus accusamus error, modi dolores
+                          similique odio alias nesciunt commodi illo quo illum
+                          fugit?
+                        </h5>
+                        <p class="text-white small">
+                          Oleh: <strong>Admin</strong> | 2 Mei 2025
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Control -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#headlineCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#headlineCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <!-- headline end -->
+
+            <!-- Cards -->
+            <div class="row mt-4">
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/travel3.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2">
+                      <p class="card-text small">
+                        Magis Tyronne di Persib, Jawaban dari Rasa Cemas dan
+                        Faktor Hebat Sang Kuasa
+                      </p>
+                      <p
+                        class="text-white small mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/sport2.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2 d-flex flex-column">
+                      <p class="card-text small">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Incidunt, quam modi fuga ab consequatur sapiente
+                        hic exercitationem itaque quas tempore repudiandae
+                        eligendi tempora ut fugiat? Dolores sed eum vel ex.
+                      </p>
+                      <p
+                        class="text-white small mt-auto mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/politik4.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2 d-flex flex-column">
+                      <p class="card-text small">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Incidunt, quam modi fuga ab consequatur sapiente
+                        hic exercitationem itaque quas tempore repudiandae
+                        eligendi tempora ut fugiat? Dolores sed eum vel ex.
+                      </p>
+                      <p
+                        class="text-white small mt-auto mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/oto3.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2 d-flex flex-column">
+                      <p class="card-text small">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Incidunt, quam modi fuga ab consequatur sapiente
+                        hic exercitationem itaque quas tempore repudiandae
+                        eligendi tempora ut fugiat? Dolores sed eum vel ex.
+                      </p>
+                      <p
+                        class="text-white small mt-auto mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/lifestyle1.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2 d-flex flex-column">
+                      <p class="card-text small">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Incidunt, quam modi fuga ab consequatur sapiente
+                        hic exercitationem itaque quas tempore repudiandae
+                        eligendi tempora ut fugiat? Dolores sed eum vel ex.
+                      </p>
+                      <p
+                        class="text-white small mt-auto mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <div class="col-md-4 mb-3">
+                <a href="pages/detail.html">
+                  <div
+                    class="card bg-dark text-white border-0 rounded-4 overflow-hidden h-100 d-flex flex-column zoom-img-container"
+                  >
+                    <img
+                      src="{{asset('front/assets/img/tren1.png')}}"
+                      class="card-img-top fixed-img"
+                      alt="Berita"
+                    />
+                    <div class="card-body p-2 d-flex flex-column">
+                      <p class="card-text small">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Incidunt
+                      </p>
+                      <p
+                        class="text-white small mt-auto mb-0"
+                        style="font-size: 0.7rem"
+                      >
+                        Oleh: <strong>Admin</strong> | 2 Mei 2025
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--  -->
+              <!-- ... ulangi kolom lainnya ... -->
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-lg-4">
+            <h5 class="mb-4 fw-semibold">Terpopuler</h5>
+            <div class="popular-scroll-container d-flex flex-column gap-3">
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="../assets/img/health4.png"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Adipisci ducimus eos maiores nobis aut soluta veniam hic
+                      sed aliquid itaque architecto assumenda enim obcaecati,
+                      quos minima doloribus, optio recusandae corporis.
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="../assets/img/property4.png"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/tren4.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/tekno4.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/sport4.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/travel1.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/tekno1.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/oto3.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="..{{asset('front/assets/img/lifestyle1.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/detail.html">
+                <div
+                  class="card bg-dark text-white border-0 rounded-4 overflow-hidden zoom-img-container"
+                >
+                  <img
+                    src="{{asset('front/assets/img/health1.png')}}"
+                    class="card-img-top fixed-img"
+                    alt="Populer"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-2 overlay-gradient"
+                  >
+                    <p class="card-text small mb-2">
+                      Mencopot Wakil Presiden Gibran Rakabuming: Antara Mandat
+                      Rakyat vs Konsensus Elite
+                    </p>
+                    <p class="text-white small mb-0" style="font-size: 0.6rem">
+                      Oleh: <strong>Redaksi</strong> | 1 Mei 2025
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <!-- ... ulangi kartu populer lainnya ... -->
+            </div>
+          </div>
+          <!-- Right content end -->
+        </div>
+      </div>
+    </section>
+    <!-- ============================ -->
+    <!-- content end -->
+    <!-- ============================ -->
+
+    <!-- ============================ -->
+    <!-- footer -->
+    <!-- ============================ -->
+
+    <footer class="footer bg-white text-dark pt-5 border-top">
+      <div class="container px-3 px-md-5">
+        <div class="row justify-content-center align-items-start gy-4 gx-md-5">
+          <!-- Logo gabungan Winnicode dan Kampus Merdeka -->
+          <div
+            class="col-md-5 text-center text-md-start d-flex flex-column align-items-center align-items-md-start"
+          >
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2 ms-md-5"
+            >
+              <img
+                src="{{asset('front/assets/img/logo.png')}}"
+                alt="Winnicode Logo"
+                class="img-fluid"
+                style="max-width: 150px"
+              />
+              <img
+                src="{{asset('front/assets/img/km.png')}}"
+                alt="Kampus Merdeka Logo"
+                class="img-fluid"
+                style="max-width: 80px"
+              />
+            </div>
+            <p
+              class="text-dark text-center text-md-start mb-0"
+              style="max-width: 400px"
+            >
+              Jurnalistik Program Winnicode adalah program pengembangan sumber
+              daya manusia yang ditujukan bagi pemuda pemudi yang berkarir di
+              dunia report.
+            </p>
+          </div>
+
+          <!-- Sosial Media -->
+          <div class="col-md-4 text-center text-md-start">
+            <p class="fw-semibold mb-3">Follow us</p>
+            <div
+              class="d-flex justify-content-center justify-content-md-start flex-wrap gap-3 mb-2"
+            >
+              <a href="#"><i class="bi bi-twitter-x fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-facebook fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-telegram fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-instagram fs-4 text-dark"></i></a>
+            </div>
+            <div
+              class="d-flex justify-content-center justify-content-md-start flex-wrap gap-3"
+            >
+              <a href="#"><i class="bi bi-tiktok fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-youtube fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-whatsapp fs-4 text-dark"></i></a>
+              <a href="#"><i class="bi bi-line fs-4 text-dark"></i></a>
+            </div>
+          </div>
+
+          <!-- Kategori -->
+          <div class="col-md-3">
+            <h5 class="fw-bold text-start">KATEGORI</h5>
+            <div class="row text-start justify-content-center">
+              <div class="col-6 listfoot">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-dark text-decoration-none">News</a>
+                  </li>
+                  <li>
+                    <a
+                      href="pages/teknologi.html"
+                      class="text-dark text-decoration-none"
+                      >Teknologi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/sport.html"
+                      class="text-dark text-decoration-none"
+                      >Sport</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/politik.html"
+                      class="text-dark text-decoration-none"
+                      >Politik</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/otomotif.html"
+                      class="text-dark text-decoration-none"
+                      >Otomotif</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6 listfoot">
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="pages/lifestyle.html"
+                      class="text-dark text-decoration-none"
+                      >Lifestyle</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/tren.html"
+                      class="text-dark text-decoration-none"
+                      >Tren</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/health.html"
+                      class="text-dark text-decoration-none"
+                      >Health</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/property.html"
+                      class="text-dark text-decoration-none"
+                      >Property</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="pages/travel.html"
+                      class="text-dark text-decoration-none"
+                      >Travel</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+          <div class="p-2">
+            <small class="text-muted" style="font-size: 0.6rem">
+              &copy; 2025 PT. Winnicode Garuda Teknologi. All rights reserved
+              <br />
+              by Bayu Sukmo Adji
+            </small>
+          </div>
+        </div>
+
+        <!-- ============================ -->
+        <!-- footer end -->
+        <!-- ============================ -->
+
+        <!-- Bootstrap JS dan Icons -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{asset('front/assets/js/script.js')}}"></script>
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

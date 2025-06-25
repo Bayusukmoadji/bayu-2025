@@ -1,11 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
+use App\Livewire\Homepage;
+use Illuminate\Support\Facades\Route;
 
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
 */
+
 Livewire::setUpdateRoute(function ($handle) {
     return Route::post(config('app.asset_prefix') . '/livewire/update', $handle);
 });
@@ -16,6 +18,8 @@ Livewire::setScriptRoute(function ($handle) {
 /*
 / END
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', Homepage::class)->name('home');
